@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login', '\App\Http\Controllers\LineLoginController@index');
+Route::get('login/line', '\App\Http\Controllers\LineLoginController@redirectToProvider');
+Route::get('login/line/callback', '\App\Http\Controllers\LineLoginController@callBack');
